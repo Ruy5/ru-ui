@@ -1,5 +1,5 @@
 <template>
-  <button>按钮</button>
+  <button style="color: red;">按钮</button>
 </template>
 
 <script setup>

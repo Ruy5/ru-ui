@@ -16,7 +16,7 @@ const vditor = ref()
 onMounted(() => {
   vditor.value = new Vditor('vditor',{
     height: '50vh',
-    width: '50vw'
+    width: '100%'
   })
 })
 
