@@ -1,10 +1,15 @@
 {
-  "name": "rui",
+  "name": "rui-v3",
   "private": false,
+  "version": "0.0.1",
+  "workspaces": [
+    "packages/*"
+  ],
   "type": "module",
   "scripts": {
     "dev": "npx vite .\\play",
-    "build": "vite build"
+    "build": "vite build",
+    "pub": "nrm use npm & npm adduser & npm publish & nrm use taobao"
   },
   "files": [
     "dist/*"
@@ -12,7 +17,16 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "add": "^2.0.6",
     "vite": "^5.3.1",
-    "vue": "^3.4.30"
-  }
+    "vue": "3.4.21"
+  },
+  "devDependencies": {
+    "lerna": "^8.1.2",
+    "sass": "^1.77.6"
+  },
+  "main": "dist/rui.js",
+  "module": "dist/rui.umd.cjs"
 }

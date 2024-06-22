@@ -1,7 +1,9 @@
 import RuPagination from "@rui/pagination/lib/pagination.vue"
+import RuRichtext from "@rui/richtext/lib/richtext.vue"
 
 const components = [
-    RuPagination
+    RuPagination,
+    RuRichtext
 ]
 
 export default  {
@@ -11,3 +13,4 @@ export default  {
         });
     }
 }
+
