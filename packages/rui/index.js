@@ -1,9 +1,11 @@
 import RuPagination from "@rui/pagination/lib/pagination.vue"
 import RuRichtext from "@rui/richtext/lib/richtext.vue"
+import RuMarkdown from "@rui/markdown/lib/markdown.vue"
 
 const components = [
     RuPagination,
-    RuRichtext
+    RuRichtext,
+    RuMarkdown
 ]
 
 export default  {

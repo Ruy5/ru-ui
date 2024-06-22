@@ -1,10 +1,10 @@
 <template>
     <RuPagination ></RuPagination>
-    <div style="width: 500px; height: 500px;">
+    <!-- <div style="width: 500px; height: 500px;">
         <RuRichtext v-model="h"></RuRichtext>
-    </div>
+    </div> -->
     
-    {{ h }}
+    <RuMarkdown></RuMarkdown>
 </template>
 
 <script setup>
