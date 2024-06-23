@@ -1,22 +1,23 @@
-<!-- src/components/Rutable.vue -->
 <template>
   <table>
     <thead>
       <tr>
-        <th v-for="column in columns" :key="column.label">{{ column.label }}</th>
+        <th v-for="column in columns" :key="column.label">{{ column.props.label }}</th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="(row, rowIndex) in data" :key="rowIndex">
         <td v-for="(column, colIndex) in columns" :key="colIndex">
-          <slot :name="column.prop" :row="row">
-            <span v-if="column.prop">{{ row[column.prop] }}</span>
-            <template v-else>
-              <slot :name="'col-' + colIndex" :row="row">
-                <span>No Data</span>
-              </slot>
-            </template>
-          </slot>
+          <template v-if="column.children">
+            <td>
+              <component :is="column" :scope="row" :prop="column.prop"></component>
+            </td>
+          </template>
+          <template v-else>
+            <td>
+              <component :is="column" :scope="row" ></component>
+            </td>
+          </template>
         </td>
       </tr>
     </tbody>
@@ -26,11 +27,14 @@
 <script setup>
 import { ref, provide, onMounted, useSlots } from 'vue';
 
+
 defineOptions({
   name: 'Rutable'
 });
 
 const slots = useSlots();
+
+console.log("slots", slots.default())
 
 const props = defineProps({
   data: {
@@ -48,12 +52,13 @@ const addColumn = column => {
 provide('addColumn', addColumn);
 
 onMounted(() => {
-  const slotContent = slots.default();
+  const slotContent = slots.default?.() || [];
 
+
+  console.log(typeof  slotContent[2])
   slotContent.forEach(node => {
-    console.log(node)
     if (node.type && node.type.name === 'RutableColumn') {
-      columns.value.push(node.props);
+      columns.value.push(node);
     }
   });
 });

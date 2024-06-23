@@ -1,6 +1,14 @@
-<!-- src/components/RutableColumn.vue -->
+
 <template>
-    <div></div>
+    <template v-if="scope">
+        <template v-if="prop">
+            {{ scope[prop] }}
+        </template>
+        <template v-else>
+            <slot :row="scope"></slot>
+        </template>
+    </template>
+    <th v-else >{{ label }}</th>
 </template>
 
 <script setup>
@@ -10,10 +18,14 @@ defineOptions({
     name: 'RutableColumn'
 });
 
+
 const props = defineProps({
     prop: {
         type: String,
         required: false
+    },
+    scope: {
+        type: Object
     },
     label: {
         type: String,
