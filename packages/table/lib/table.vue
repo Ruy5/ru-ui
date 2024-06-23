@@ -1,27 +1,19 @@
 <template>
-  <table>
-    <thead>
-      <tr>
-        <th v-for="column in columns" :key="column.label">{{ column.props.label }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(row, rowIndex) in data" :key="rowIndex">
-        <td v-for="(column, colIndex) in columns" :key="colIndex">
-          <template v-if="column.children">
-            <td>
-              <component :is="column" :scope="row" :prop="column.prop"></component>
-            </td>
-          </template>
-          <template v-else>
-            <td>
-              <component :is="column" :scope="row" ></component>
-            </td>
-          </template>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div style="display: flex; justify-content: space-around;">
+    <div v-for="column in columns" :key="column.label">{{ column.props.label }}</div>
+  </div>
+  <div>
+  <div v-for="(row, rowIndex) in data" :key="rowIndex" style="display: flex; justify-content: space-around;" >
+      <div v-for="(column, colIndex) in columns" :key="colIndex" >
+        <template v-if="column.children">
+            <component :is="column" :scope="row" :prop="column.prop"></component>
+        </template>
+        <template v-else>
+            <component :is="column" :scope="row" ></component>
+        </template>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -33,8 +25,6 @@ defineOptions({
 });
 
 const slots = useSlots();
-
-console.log("slots", slots.default())
 
 const props = defineProps({
   data: {
@@ -54,8 +44,6 @@ provide('addColumn', addColumn);
 onMounted(() => {
   const slotContent = slots.default?.() || [];
 
-
-  console.log(typeof  slotContent[2])
   slotContent.forEach(node => {
     if (node.type && node.type.name === 'RutableColumn') {
       columns.value.push(node);

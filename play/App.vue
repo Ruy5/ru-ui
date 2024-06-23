@@ -4,9 +4,7 @@
             <RutableColumn prop="date" label="日期" />
             <RutableColumn  prop="name" label="姓名"/>
             <RutableColumn label="删除">
-                <template #default="row">
-                    <div style="color: red">X</div>
-                </template>
+                <button>删除</button>
             </RutableColumn>
         </Rutable>
     </div>

@@ -8,7 +8,7 @@
             <slot :row="scope"></slot>
         </template>
     </template>
-    <th v-else >{{ label }}</th>
+    <template v-else >{{ label }}</template>
 </template>
 
 <script setup>
