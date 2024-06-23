@@ -1,8 +1,8 @@
 <template>
     <RuTable :data="tableData">
-        <RuTableColumn  prop="date" label="Date"/>
-        <RuTableColumn  prop="name" label="Name"/>
-        <RuTableColumn  prop="address" label="Address"/>
+        <RuTableColumn  prop="date" label="Date"  width="1"/>
+        <RuTableColumn  prop="name" label="Name"  width="1"/>
+        <RuTableColumn  prop="address" label="Address" width="2"/>
     </RuTable>
 
 </template>

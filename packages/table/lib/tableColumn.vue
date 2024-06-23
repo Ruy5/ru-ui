@@ -1,4 +1,3 @@
-
 <template>
     <template v-if="scope">
         <template v-if="prop">
@@ -8,7 +7,7 @@
             <slot :row="scope"></slot>
         </template>
     </template>
-    <template v-else >{{ label }}</template>
+    <template v-else>{{ label }}</template>
 </template>
 
 <script setup>

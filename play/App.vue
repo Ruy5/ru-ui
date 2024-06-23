@@ -1,9 +1,9 @@
 <template>
     <div style="width: 50vh;">
         <Rutable :data="tableData">
-            <RutableColumn prop="date" label="日期" />
-            <RutableColumn  prop="name" label="姓名"/>
-            <RutableColumn label="删除">
+            <RutableColumn prop="date" label="日期" width="1"/>
+            <RutableColumn  prop="name" label="姓名"  width="1"/>
+            <RutableColumn label="删除"  width="1">
                 <button>删除</button>
             </RutableColumn>
         </Rutable>
