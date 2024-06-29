@@ -1,3 +1,8 @@
+# Menu 菜单
+
+## WordPress 风格菜单
+
+```html
 <template>
     <RuMenuWp>
         <RuMenuItemWp index="1">菜单一</RuMenuItemWp>
@@ -11,5 +16,14 @@
 </template>
 
 <script setup>
+import RuMenuWp from "@rui/menu/lib/menuWp.vue";
+import RuMenuItemWp from "@rui/menu/lib/menuItemWp.vue";
+import RuSubMenuWp from "@rui/menu/lib/subMenuWp.vue";
+</script>
+```
 
+<DocMenuWp />
+
+<script setup>
+import DocMenuWp from "./menuWp.vue"
 </script>

@@ -1,19 +1,29 @@
 <template>
-    <div class="ru-menu-item-wp">
+    <div :class="['ru-menu-item-wp', { active: isActive }]" @click="handleClick">
         <slot></slot>
     </div>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { inject, computed } from 'vue';
 
 defineOptions({
     name: "RuMenuItemWp"
 })
 
+
 const props = defineProps({
     index: String
 });
+
+const state = inject('menuState');
+const setActiveIndex = inject('setActiveIndex');
+
+const isActive = computed(() => state.activeIndex === props.index);
+
+function handleClick() {
+    setActiveIndex(props.index);
+}
 </script>
 
 <style scoped>
@@ -29,5 +39,10 @@ const props = defineProps({
 .ru-menu-item-wp:hover {
     background-color: rgb(236, 236, 236);
     color: black;
+}
+
+.active{
+    background-color: #1890ff !important;
+    color: white !important;
 }
 </style>

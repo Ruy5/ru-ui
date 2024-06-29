@@ -28,9 +28,9 @@ function toggleSubMenu() {
 </script>
 
 <style scoped>
-.ru-submenu-wp {
-    /* 样式可以根据需求调整 */
-}
+/* .ru-submenu-wp {
+    
+} */
 
 .submenu-title {
     width: 100%;
@@ -47,7 +47,7 @@ function toggleSubMenu() {
 }
 
 .submenu-items {
-    border-left: 1px dashed rgba(188, 195, 206, 0.5); 
+    border-left: 1px dashed rgba(188, 195, 206, 0.5);
     margin-left: 10px;
 }
 </style>

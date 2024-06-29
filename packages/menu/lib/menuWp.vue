@@ -5,13 +5,22 @@
 </template>
 
 <script setup>
-import { provide } from 'vue';
+import { provide, reactive } from 'vue';
 
 defineOptions({
     name: "RuMenuWp"
 })
 
-provide('menuIndex', 'root');
+const state = reactive({
+    activeIndex: null
+});
+
+function setActiveIndex(index) {
+    state.activeIndex = index;
+}
+
+provide('menuState', state);
+provide('setActiveIndex', setActiveIndex);
 </script>
 
 <style scoped>

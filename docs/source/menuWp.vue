@@ -11,5 +11,7 @@
 </template>
 
 <script setup>
-
+import RuMenuWp from "@rui/menu/lib/menuWp.vue";
+import RuMenuItemWp from "@rui/menu/lib/menuItemWp.vue";
+import RuSubMenuWp from "@rui/menu/lib/subMenuWp.vue";
 </script>
