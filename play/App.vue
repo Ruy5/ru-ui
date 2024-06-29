@@ -1,23 +1,18 @@
 <template>
-    <!-- <div style="width: 50vh;">
-        <Rutable :data="tableData">
-            <RutableColumn prop="date" label="日期" width="1"/>
-            <RutableColumn  prop="name" label="姓名"  width="1"/>
-            <RutableColumn label="删除"  width="1">
-                <button>删除</button>
-            </RutableColumn>
-        </Rutable>
-    </div> -->
-    <RuMenuWp></RuMenuWp>
+    <RuMenuWp>
+        <RuMenuItemWp index="1">
+            <div style="color: red;">菜单一</div>
+        </RuMenuItemWp>
+        <RuMenuItemWp index="2">菜单二</RuMenuItemWp>
+        <RuSubMenuWp index="3">
+            <template #title>item four</template>
+            <RuMenuItemWp index="3-1">item one</RuMenuItemWp>
+            <RuMenuItemWp index="3-2">item two</RuMenuItemWp>
+            <RuMenuItemWp index="3-3">item three</RuMenuItemWp>
+        </RuSubMenuWp>
+    </RuMenuWp>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
-
-const tableData = ref([
-    { date: '今天', name: 'Ruy5' },
-    { date: '昨天', name: 'Kun' }
-]);
 
 </script>
