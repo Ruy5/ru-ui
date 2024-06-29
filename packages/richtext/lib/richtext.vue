@@ -62,7 +62,9 @@ onBeforeUnmount(() => {
             style="flex: 1; min-height: 100px; overflow-y: hidden;"
             @onCreated="handleCreated"
         />
+       
     </div>
+    {{ valueHtml }}
 </template>
 
 <!-- 别忘了引入样式 -->
