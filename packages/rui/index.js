@@ -6,7 +6,7 @@ import RuTableColumn from "@rui/table/lib/tableColumn.vue";
 import RuMenuWp from "@rui/menu/lib/menuWp.vue";
 import RuMenuItemWp from "@rui/menu/lib/menuItemWp.vue";
 import RuSubMenuWp from "@rui/menu/lib/subMenuWp.vue";
-
+import RuCard from "@rui/card/lib/card.vue";
 const components = [
     RuPagination,
     RuRichtext,
@@ -15,7 +15,8 @@ const components = [
     RuTableColumn,
     RuMenuWp,
     RuMenuItemWp,
-    RuSubMenuWp
+    RuSubMenuWp,
+    RuCard
 ]
 
 export default  {

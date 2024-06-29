@@ -34,6 +34,7 @@ function handleClick() {
     box-sizing: border-box;
     border-radius: 0.6rem;
     color: black;
+    cursor: pointer;
 }
 
 .ru-menu-item-wp:hover {
