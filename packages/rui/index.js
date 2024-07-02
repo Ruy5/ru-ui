@@ -7,6 +7,7 @@ import RuMenuWp from "@rui/menu/lib/menuWp.vue";
 import RuMenuItemWp from "@rui/menu/lib/menuItemWp.vue";
 import RuSubMenuWp from "@rui/menu/lib/subMenuWp.vue";
 import RuCard from "@rui/card/lib/card.vue";
+import RuWaterFall from "@rui/waterfall/lib/waterfall.vue";
 const components = [
     RuPagination,
     RuRichtext,
@@ -16,7 +17,8 @@ const components = [
     RuMenuWp,
     RuMenuItemWp,
     RuSubMenuWp,
-    RuCard
+    RuCard,
+    RuWaterFall
 ]
 
 export default  {
