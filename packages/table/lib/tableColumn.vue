@@ -13,7 +13,7 @@
 <script setup>
 
 defineOptions({
-    name: 'RutableColumn'
+    name: 'RuTableColumn'
 });
 
 

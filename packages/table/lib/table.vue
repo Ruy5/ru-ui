@@ -34,7 +34,7 @@ import { ref, provide, onMounted, useSlots } from 'vue';
 
 
 defineOptions({
-  name: 'Rutable'
+  name: 'RuTable'
 });
 
 const widthTatol = ref(0)
@@ -60,7 +60,7 @@ onMounted(() => {
   const slotContent = slots.default?.() || [];
 
   slotContent.forEach(node => {
-    if (node.type && node.type.name === 'RutableColumn') {
+    if (node.type && node.type.name === 'RuTableColumn') {
       widthTatol.value += node.props.width ? node.props.width : 1
       columns.value.push(node);
     }

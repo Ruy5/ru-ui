@@ -22,6 +22,7 @@ const components = [
 export default  {
     install: (app) => {
         components.forEach(component => {
+            console.log(component.name, component)
             app.component(component.name, component)
         });
     }

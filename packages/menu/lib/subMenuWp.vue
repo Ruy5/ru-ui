@@ -10,19 +10,25 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, toRefs } from 'vue';
 
 defineOptions({
     name: "RuSubMenuWp"
 })
 
 const props = defineProps({
-    index: String
+    index: String,
+    allowOpen: {
+        type: Boolean,
+        default: true
+    }
 });
+const {allowOpen} = toRefs(props)
 
-const isOpen = ref(false);
+const isOpen = ref(allowOpen.value ? false : true);
 
 function toggleSubMenu() {
+    if(allowOpen.value == false) return
     isOpen.value = !isOpen.value;
 }
 </script>
