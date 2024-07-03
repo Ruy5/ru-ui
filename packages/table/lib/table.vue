@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref, provide, onMounted, useSlots } from 'vue';
+import { ref, onMounted, useSlots } from 'vue';
 
 
 defineOptions({
@@ -49,12 +49,6 @@ const props = defineProps({
 });
 
 const columns = ref([]);
-
-const addColumn = column => {
-  columns.value.push(column);
-};
-
-provide('addColumn', addColumn);
 
 onMounted(() => {
   const slotContent = slots.default?.() || [];
