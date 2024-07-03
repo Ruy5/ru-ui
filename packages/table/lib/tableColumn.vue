@@ -16,7 +16,6 @@ defineOptions({
     name: 'RuTableColumn'
 });
 
-
 const props = defineProps({
     prop: {
         type: String,

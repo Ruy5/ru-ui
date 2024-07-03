@@ -1,9 +1,9 @@
 <template>
-  <div class="fs-waterfall-container" >
-    <div class="fs-waterfall-content" ref="contentRef">
-      <div class="fs-waterfall-list">
+  <div class="ru-waterfall-container" >
+    <div class="ru-waterfall-content" ref="contentRef">
+      <div class="ru-waterfall-list">
         <div
-          class="fs-waterfall-item"
+          class="ru-waterfall-item"
           v-for="(item, index) in state.imageList"
           :key="item.id"
           :style="{
@@ -24,7 +24,7 @@ import { computed, onMounted, onUnmounted, reactive, ref } from "vue";
 const props = defineProps(["gap", "column", "request", "page-size", "toload"]);
 
 defineOptions({
-  name: "FsWaterFall"
+  name: "RuWaterFall"
 })
 
 const rafThrottle = (fn) => {
@@ -158,7 +158,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped lang="scss">
-.fs-waterfall {
+.ru-waterfall {
   &-container {
     width: 100%;
     height: 100%;
