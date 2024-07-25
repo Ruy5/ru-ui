@@ -8,6 +8,8 @@ import RuMenuItemWp from "@rui/menu/lib/menuItemWp.vue";
 import RuSubMenuWp from "@rui/menu/lib/subMenuWp.vue";
 import RuCard from "@rui/card/lib/card.vue";
 import RuWaterFall from "@rui/waterfall/lib/waterfall.vue";
+import {Message} from "@rui/message/lib/message.js";
+
 const components = [
     RuPagination,
     RuRichtext,
@@ -21,12 +23,22 @@ const components = [
     RuWaterFall
 ]
 
+// const funcs = [
+//     Message
+// ]
+
+
 export default  {
     install: (app) => {
         components.forEach(component => {
             console.log(component.name, component)
             app.component(component.name, component)
         });
-    }
+        app.config.globalProperties.$message = Message
+        // funcs.forEach(func => {
+        //     app.config.globalProperties.$message = func
+        // })
+    },
 }
 
+export const Msg = Message

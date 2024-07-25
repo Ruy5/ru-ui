@@ -1,0 +1,29 @@
+{
+  "name": "@rui/message",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Ruy5 <snake.snakeyy@gmail.com>",
+  "homepage": "https://github.com/Ruy5/ru-ui#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruy5/ru-ui.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/message.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Ruy5/ru-ui/issues"
+  }
+}
