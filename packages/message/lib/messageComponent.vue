@@ -44,7 +44,8 @@ onMounted(() => {
     line-height: 40px;
     border: solid 1px red;
     transition: all 1s, to;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: aquamarine;
 }
 
 .ru-msg-fade-enter-from, .ru-msg-fade-leave-to {
